@@ -13,10 +13,11 @@ let month_last_day=month_last.getDate();
 console.log(month_last_day);
 const first_week=document.getElementById("first-week")
 const day_area = document.getElementById('table');
+const month_now=document.getElementById('month')
 //첫 주와 나머지주 구분 
     //첫주
 let count=0;
-
+month_now.innerText=(month+1)+'월';
 for (i of day_area.childNodes[3].children){
     if (i ==first_week){
         for (let v=month_first_week;v<7;v++){
