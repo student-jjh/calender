@@ -79,6 +79,7 @@ function calendar_make(current_year,current_month){
             for (let l=month_first_week-1;l>=0;l--){
                 i.children[l].style.color='gray';
                 i.children[l].innerText=(lastMonth-frontCount)+'일';
+                i.children[l].removeEventListener('click',handleClickDay)
                 frontCount+=1;
             }
         }else if(i==last_week ||i==last_week2){
@@ -100,6 +101,7 @@ function calendar_make(current_year,current_month){
                 if (i.children[a].innerText==''){
                 i.children[a].style.color='gray';
                 i.children[a].innerText=newCount+'일';
+                i.children[a].removeEventListener('click',handleClickDay)
                 newCount+=1;
                 }
             }
@@ -126,6 +128,7 @@ function calendar_make(current_year,current_month){
                 if (last_week.children[a].innerText==''){
                 last_week.children[a].style.color='gray';
                 last_week.children[a].innerText=newCount+'일';
+                last_week.children[a].removeEventListener('click',handleClickDay)
                 newCount+=1;
                 }
             }
@@ -133,6 +136,7 @@ function calendar_make(current_year,current_month){
                 if (last_week2.children[a].innerText==''){
                 last_week2.children[a].style.color='gray';
                 last_week2.children[a].innerText=newCount+'일';
+                last_week2.children[a].removeEventListener('click',handleClickDay)
                 newCount+=1;
                 }
             }
