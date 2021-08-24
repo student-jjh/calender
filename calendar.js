@@ -56,9 +56,11 @@ function calendar_make(current_year,current_month){
     let month_last_day=month_last.getDate();
     let lastMonth=(new Date(current_year,current_month,0)).getDate();
     const last_week=document.getElementById('fifth-week');
+    const last_week2=document.getElementById('sixth-week');
     const first_week=document.getElementById("first-week")
     const day_area = document.getElementById('table');
     const month_now=document.getElementById('month')
+    let newCount=1;
     let count=0;
     month_now.innerText=current_year+'년 '+(current_month+1)+'월';
     for (i of day_area.childNodes[3].children){
@@ -79,9 +81,9 @@ function calendar_make(current_year,current_month){
                 i.children[l].innerText=(lastMonth-frontCount)+'일';
                 frontCount+=1;
             }
-        }else if(i==last_week){
+        }else if(i==last_week ||i==last_week2){
             
-            for (let k=0;k<=month_last.getDay();k++){
+            for (let k=0;k<7;k++){
             if (count==month_last_day){
                 break
             }
@@ -94,7 +96,6 @@ function calendar_make(current_year,current_month){
             i.children[k].addEventListener('click',handleClickDay);
             count+=1;
             }
-            let newCount=1;
             for (let a=0;a<7;a++){
                 if (i.children[a].innerText==''){
                 i.children[a].style.color='gray';
@@ -119,12 +120,19 @@ function calendar_make(current_year,current_month){
                 count+=1;
                 }
         }
-        let newCount=1;
+        
         if (count==month_last_day){
             for (let a=0;a<7;a++){
                 if (last_week.children[a].innerText==''){
                 last_week.children[a].style.color='gray';
                 last_week.children[a].innerText=newCount+'일';
+                newCount+=1;
+                }
+            }
+            for (let a=0;a<7;a++){
+                if (last_week2.children[a].innerText==''){
+                last_week2.children[a].style.color='gray';
+                last_week2.children[a].innerText=newCount+'일';
                 newCount+=1;
                 }
             }
