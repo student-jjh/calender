@@ -21,8 +21,41 @@ body{
     display: flex;
 }
 #todo-area{
-    margin-left: 30px;
+    justify-content: center;
 }
 .day{
     cursor: pointer;
+}
+#todo-area{
+    background-color: black;
+    color:white;
+    height: 745.594px;
+    width: 600px;
+}
+#calendar-area{
+    background-color: black;
+    color:white;
+}
+#todo-flex{
+    margin-top: 150px;
+}
+#todo-form input{
+    color:white;
+    border :none;
+    background:transparent ;
+    text-align: center;
+    font-size: 30px;
+    width: 600px;
+} 
+#todo-form input::placeholder{color:white;}
+#todo-form input:focus{
+    outline: none;
+    color:white;
+}
+#todo-list {
+    list-style: none;
+    text-align: center;
+    padding:0 auto;
+    justify-content: center;
+    font-size: 30px;
 }
