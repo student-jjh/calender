@@ -9,74 +9,80 @@
 
 </head>
 <body>
-    <h1>CALENDAR</h1>
-    <h3 id='month'></h3>
-    <div>
-        <button id ='back-button'>◁</button>
-        <button id ='today-button'>TODAY</button>
-        <button id ='front-button'>▷</button>
+    <div id ='main-area'>
+        <div id ='calendar-area'>
+            <h1>CALENDAR</h1>
+            <h3 id='month'></h3>
+            <div>
+                <button id ='back-button'>◁</button>
+                <button id ='today-button'>TODAY</button>
+                <button id ='front-button'>▷</button>
+            </div>
+            <table border=2 id='table'>
+                <thead>
+                <th class ='week-name'>일</th><th class ='week-name'>월</th><th class ='week-name'>화</th><th class ='week-name'>수</th><th class ='week-name'>목</th><th class ='week-name'>금</th><th class ='week-name'>토</th>
+                </thead>
+                <tbody>
+                <tr id='first-week'>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                        <td class ='first day'></td>
+                    </tr>
+                    <tr id='second-week'>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                        <td class='second day'></td>
+                    </tr>
+                    <tr id='third-week'>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                        <td class ='third day'></td>
+                    </tr>
+                    <tr id ='fourth-week'>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                        <td class='fourth day'></td>
+                    </tr>
+                    <tr id='fifth-week'>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                        <td class='fifth day'></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+        <div id='todo-area'>
+            <h1>TODO</h1>
+            <h2 id='day-check'></h2>
+            <div id = 'todo-flex'>
+                <form id='todo-form'>
+                    <input type="text" placeholder="What you done" required />
+                </form>
+                <ul id='todo-list'></ul>
+            </div>
+        </div>
     </div>
-    <table border=2 id='table'>
-        <thead>
-        <th class ='week-name'>일</th><th class ='week-name'>월</th><th class ='week-name'>화</th><th class ='week-name'>수</th><th class ='week-name'>목</th><th class ='week-name'>금</th><th class ='week-name'>토</th>
-        </thead>
-        <tbody>
-        <tr id='first-week'>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-                <td class ='first day'></td>
-            </tr>
-            <tr id='second-week'>
-                <td class='second day'></td>
-                <td class='second day'></td>
-                <td class='second day'></td>
-                <td class='second day'></td>
-                <td class='second day'></td>
-                <td class='second day'></td>
-                <td class='second day'></td>
-            </tr>
-            <tr id='third-week'>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-                <td class ='third day'></td>
-            </tr>
-            <tr id ='fourth-week'>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-                <td class='fourth day'></td>
-            </tr>
-            <tr id='fifth-week'>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-                <td class='fifth day'></td>
-            </tr>
-            <tr id='sixth-week'>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-                <td class='sixth day'></td>
-            </tr>
-        </tbody>
-    </table>
     <script src='calendar.js'></script>
 </body>
 </html>

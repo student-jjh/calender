@@ -17,3 +17,12 @@ body{
     height: 60px;
     text-align: right;
 }
+#main-area{
+    display: flex;
+}
+#todo-area{
+    margin-left: 30px;
+}
+.day{
+    cursor: pointer;
+}
